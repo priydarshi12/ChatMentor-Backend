@@ -21,6 +21,6 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/password", passwordRoute);
 app.use("/api/v1/openai",openai);
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
 // console.log("server is running");
 });
