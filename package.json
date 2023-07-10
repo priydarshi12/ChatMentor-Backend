@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/priydarshi12/ChatMentor.git"
+    "url": "git+https://github.com/priydarshi12/ChatMentor-Backend.git"
   },
   "author": "Priydarshi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/priydarshi12/ChatMentor/issues"
+    "url": "https://github.com/priydarshi12/ChatMentor-Backend/issues"
   },
-  "homepage": "https://github.com/priydarshi12/ChatMentor#readme",
+  "homepage": "https://github.com/priydarshi12/ChatMentor-Backend#readme",
   "dependencies": {
     "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
