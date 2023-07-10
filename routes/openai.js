@@ -15,7 +15,7 @@ router.post("/summary", async (req, res) => {
     const { data } = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `Summarize this ${text}`,
-      max_tokens: 400,
+      max_tokens: 200,
       temperature: 0.5,
     });
     if (data) {
@@ -36,7 +36,7 @@ router.post("/text", async (req, res) => {
     const { data } = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `write a detailed paragraph about ${text}`,
-      max_tokens: 1000,
+      max_tokens: 300,
       temperature: 0.7,
     });
     if (data) {
@@ -58,7 +58,7 @@ router.post("/js", async (req, res) => {
     const { data } = await openai.createCompletion({
       model: "text-davinci-002",
       prompt: `write javascript code for following instruction ${text}`,
-      max_tokens: 400,
+      max_tokens: 300,
       temperature: 0.7,
     });
     if (data) {
@@ -82,7 +82,7 @@ router.post("/chat", async (req, res) => {
       Me: 'what is your name ?'
       Drashin:'Drashin is my name'
       Me:${text}`,
-      max_tokens: 300,
+      max_tokens: 100,
       temperature: 0.7,
     });
     if (data) {
