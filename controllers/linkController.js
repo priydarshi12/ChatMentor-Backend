@@ -23,7 +23,7 @@ module.exports.linkController = async (req, res, next) => {
     const User = await user.findOne({ email: req.body.email });
     if (User.email) {
       const token = jwt.sign({ _id: User._id }, `${keysecret}`, {
-        expiresIn: "5",
+        expiresIn: "300s",
       });
 
       const setusertoken = await user.findByIdAndUpdate(

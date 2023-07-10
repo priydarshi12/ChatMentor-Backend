@@ -39,12 +39,9 @@ module.exports.newPassword = async (req, res) => {
 };
 module.exports.pValidate = async (req, res) => {
   const { id, token } = req.body;
-
   try {
     const User = await user.findOne({ _id: id, verifytoken: token });
-
     const veriftToken = jwt.verify(token, `${keysecret}`);
-
     if (User && veriftToken._id) {
       res.send({ msg: "Please enter your New Password", status: true });
     } else {
@@ -52,6 +49,7 @@ module.exports.pValidate = async (req, res) => {
     }
   } catch (err) {
     res.send({
+     
       msg: "You are not authenticated,Please try again",
       status: false,
     });
