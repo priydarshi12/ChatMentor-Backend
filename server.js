@@ -23,4 +23,5 @@ app.use("/api/v1/openai",openai);
 
 app.listen(PORT, () => {
 // console.log("server is running");
+console.log(process.env.OPENAI_API_KEY);
 });
